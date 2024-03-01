@@ -1,0 +1,22 @@
+<h1>Registrierung für neuen Administrativen Nutzer</h1>
+<form method="post">
+    <div><input type="text" name="username" value="{{username}}" placeholder="Username"></div>
+    <div><input type="password" name="password" placeholder="Password"></div>
+    <div><input type="password" name="password2" placeholder="Repeat Password"></div>
+    <div>
+        <label for="select">Administrationsrang</label>
+        <select id="select" name="rank">
+            <option value="1">Betrachter</option>
+            <option value="2">Personalakten</option>
+            <option value="3">Admin</option>
+            <option value="4">Developer</option>
+        </select>
+    </div>
+    <div><button type="submit">Registrieren</button> </div>
+</form>
+{{#errors}}
+<div style="color:red">{{.}}</div>
+{{/errors}}
+<div>{{username}}</div>
+<div>{{email}}</div>
+<div>{{password}}</div>
